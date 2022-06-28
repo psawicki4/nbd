@@ -1,0 +1,16 @@
+Added: {location: {namespace: {type: default, bucket: s25882}, key: ringworld}, values: []}
+Fetched: {
+  "title": "Ringworld",
+  "author": "Larry Niven",
+  "pages": 342,
+  "available": true
+}
+Modified: {location: {namespace: {type: default, bucket: s25882}, key: ringworld}, values: []}
+Fetched: {
+  "title": "Ringworld",
+  "author": "Larry Niven",
+  "pages": 342,
+  "available": false
+}
+Deleted
+Not found: {location: {namespace: {type: default, bucket: s25882}, key: ringworld}, values: []}

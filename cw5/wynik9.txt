@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Mon, 27 Jun 2022 20:24:41 GMT
+Content-Type: application/json
+Content-Length: 109
+
+{"keys":["fundation","thethreebodyproblem","hyperion","KWYWadoy77zEBvYhtJwrOKWux10","thelefthandofdarkness"]}
+
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8tgFmdmLZzx0hQomMeawMxr16d/iyAA==
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s25882>; rel="up"
+Last-Modified: Mon, 27 Jun 2022 20:21:07 GMT
+ETag: "4jzTENPjquRz8SFI4q291J"
+Date: Mon, 27 Jun 2022 20:25:50 GMT
+Content-Type: application/json
+Content-Length: 24
+
+{
+  "title": "Solaris"
+}

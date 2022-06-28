@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8tgFmdmI5qh4QoUTGPFYG1xq9O3xZAA==
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s25882>; rel="up"
+Last-Modified: Mon, 27 Jun 2022 19:08:53 GMT
+ETag: "5Ds9lnqJtj4jQeZq8eTyRY"
+Date: Mon, 27 Jun 2022 19:25:09 GMT
+Content-Type: application/json
+Content-Length: 87
+
+{
+  "title": "Dune",
+  "author": "Frank Herbert",
+  "pages": 412,
+  "available": true
+}

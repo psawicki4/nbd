@@ -1,0 +1,44 @@
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("943b00e8-59da-4b23-9165-f1241788fe95") }
+MongoDB server version: 5.0.6
+{
+	"_id" : ObjectId("62768023c7ef8fb3069f8807"),
+	"sex" : "Female",
+	"first_name" : "Brenda",
+	"last_name" : "Gonzalez",
+	"job" : "Librarian",
+	"email" : "bgonzalez5@github.com",
+	"location" : {
+		"city" : "Glagahan",
+		"address" : {
+			"streetname" : "Union",
+			"streetnumber" : "88"
+		}
+	},
+	"description" : "ac nibh fusce lacus purus aliquet at feugiat non pretium quis",
+	"height" : "174.56",
+	"weight" : "68.14",
+	"birth_date" : "2011-11-04T22:35:37Z",
+	"nationality" : "Indonesia",
+	"credit" : [
+		{
+			"type" : "jcb",
+			"number" : "5007660999443305",
+			"currency" : "RSD",
+			"balance" : "5328.58"
+		},
+		{
+			"type" : "switch",
+			"number" : "5602246288423007",
+			"currency" : "SEK",
+			"balance" : "5115.83"
+		},
+		{
+			"type" : "jcb",
+			"number" : "3555629611566737",
+			"currency" : "EUR",
+			"balance" : "6050.21"
+		}
+	]
+}

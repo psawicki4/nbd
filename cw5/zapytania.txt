@@ -1,0 +1,80 @@
+1.
+curl -i -XPOST -H "Content-Type: application/json" -d '{
+  "title": "Dune",
+  "author": "Frank Herbert",
+  "pages": 412,
+  "available": true
+}' http://localhost:8098/buckets/s25882/keys/dune
+
+curl -i -XPOST -H "Content-Type: application/json" -d '{
+  "title": "Foundation",
+  "author": "Isaac Asimov",
+  "pages": 255,
+  "available": false
+}' http://localhost:8098/buckets/s25882/keys/fundation
+
+curl -i -XPOST -H "Content-Type: application/json" -d '{
+  "title": "The Three-Body Problem",
+  "author": "Liu Cixin",
+  "pages": 302,
+  "available": false
+}' http://localhost:8098/buckets/s25882/keys/thethreebodyproblem
+
+curl -i -XPOST -H "Content-Type: application/json" -d '{
+  "title": "Hyperion",
+  "author": "Dan Simmons",
+  "pages": 482,
+  "available": true
+}' http://localhost:8098/buckets/s25882/keys/hyperion
+
+curl -i -XPOST -H "Content-Type: application/json" -d '{
+  "title": "The Left Hand of Darkness",
+  "author": "Ursula K. Le Guin",
+  "pages": 286,
+  "available": true
+}' http://localhost:8098/buckets/s25882/keys/thelefthandofdarkness
+
+2.
+curl -i http://localhost:8098/buckets/s25882/keys/dune
+
+3.
+curl -i -XPUT -H "Content-Type: application/json" -d '{
+  "title": "Dune",
+  "author": "Frank Herbert",
+  "pages": 412,
+  "available": true,
+  "published": 1965
+}' http://localhost:8098/buckets/s25882/keys/dune
+
+4.
+curl -i -XPUT -H "Content-Type: application/json" -d '{
+  "title": "Foundation",
+  "author": "Isaac Asimov",
+  "available": false
+}' http://localhost:8098/buckets/s25882/keys/fundation
+
+5.
+curl -i -XPUT -H "Content-Type: application/json" -d '{
+  "title": "The Three-Body Problem",
+  "author": "Liu Cixin",
+  "pages": 302,
+  "available": true
+}' http://localhost:8098/buckets/s25882/keys/thethreebodyproblem
+
+6.
+curl -i -XDELETE http://localhost:8098/buckets/s25882/keys/dune
+
+7.
+curl -i http://localhost:8098/buckets/s25882/keys/fahrenheit451
+
+8.
+curl -i -XPOST -H "Content-Type: application/json" -d '{
+  "title": "Solaris"
+}' http://localhost:8098/buckets/s25882/keys
+
+9.
+curl -i http://localhost:8098/buckets/s25882/keys?keys=true
+curl -i http://localhost:8098/buckets/s25882/keys/KWYWadoy77zEBvYhtJwrOKWux10
+
+10.
+curl -i -XDELETE http://localhost:8098/buckets/s25882/keys/KWYWadoy77zEBvYhtJwrOKWux10

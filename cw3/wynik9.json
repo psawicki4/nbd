@@ -1,0 +1,85 @@
+﻿[
+  {
+    "captainAmerica": {
+"identity": 171,
+"labels": [
+        "Movie"
+      ],
+"properties": {
+"tagline": "When patriots become heroes",
+"title": "Captain America: The First Avenger",
+"released": 2011
+      }
+    },
+    "chris": {
+"identity": 172,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"born": 1981,
+"name": "Chris Evans"
+      }
+    },
+    "hugo": {
+"identity": 4,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"born": 1960,
+"name": "Hugo Weaving"
+      }
+    },
+    "samuel": {
+"identity": 173,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"born": 1948,
+"name": "Samuel L. Jackson"
+      }
+    },
+    "joe": {
+"identity": 174,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"born": 1950,
+"name": "Joe Johnston"
+      }
+    },
+    "chritopher": {
+"identity": 175,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"born": 1970,
+"name": "Christopher Markus"
+      }
+    },
+    "stephen": {
+"identity": 176,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"born": 1970,
+"name": "Stephen McFeely"
+      }
+    },
+    "joeSimon": {
+"identity": 177,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"born": 1913,
+"name": "Joe Simon"
+      }
+    }
+  }
+]

@@ -1,0 +1,1 @@
+printjson(db.people.aggregate([{$unwind: {"path": "$credit"}}, {$group: {"_id": "$credit.currency", "balance": {$sum: {$toDouble: "$credit.balance"}}}}]).toArray())

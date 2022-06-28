@@ -1,0 +1,57 @@
+1. 
+MATCH path = shortestPath((darjeeling:town {name: "Darjeeling"} )-[*]->(sandakphu:peak {name: "Sandakphu"} ))
+RETURN path
+
+2.
+MATCH path = shortestPath((darjeeling:town {name: "Darjeeling"} )-[*]->(sandakphu:peak {name: "Sandakphu"} ))
+      WHERE ALL(r IN RELATIONSHIPS(path) WHERE r.winter = "true")
+RETURN path
+
+3.
+MATCH path = (darjeeling:town {name: "Darjeeling"} )-[*]->(sandakphu:peak {name: "Sandakphu"} )
+RETURN path, REDUCE(td=0, i IN RELATIONSHIPS(path) | td+i.distance) AS totalDistance
+ORDER BY totalDistance
+
+4.
+MATCH (darjeeling:town {name: "Darjeeling"} )-[:twowheeler {summer: "true"} ]->(dest)
+RETURN dest
+
+5.
+MATCH (f:Flight)-[:ORIGIN]->(a:Airport)
+RETURN a, count(f) as totalFlights
+ORDER BY totalFlights
+
+6.
+MATCH path = (:Airport {name:"LAX"} )-[*..5]-(airport:Airport)
+WHERE airport.name <> "LAX" AND TYPE(head(RELATIONSHIPS(path))) = "ORIGIN"
+WITH path, REDUCE(tp = 0, n IN [x IN NODES(path) WHERE "Flight" IN LABELS(x)] | tp + [(n)<-[:ASSIGN]-(t:Ticket {class:"economy"} ) | t.price][0]) AS totalPrice, airport
+WHERE totalPrice < 3000
+RETURN DISTINCT airport
+
+7.
+MATCH path = (:Airport {name: "LAX"} )-[:ORIGIN|DESTINATION*..8]-(:Airport {name: "DAY"} )
+WHERE TYPE(head(RELATIONSHIPS(path))) = "ORIGIN"
+WITH path, REDUCE (tp = 0, n IN [x IN NODES(path) WHERE "Flight" IN LABELS(x)] | tp + [(n)<-[:ASSIGN]-(t: Ticket {class:"economy"} ) | t.price][0]) AS totalPrice
+RETURN path, totalPrice
+ORDER BY totalPrice ASC
+
+8.
+MATCH path = (:Airport {name: "LAX"} )-[:ORIGIN|DESTINATION*..8]-(:Airport {name: "DAY"} )
+WHERE TYPE(head(RELATIONSHIPS(path))) = "ORIGIN"
+WITH path, REDUCE (tp = 0, n IN [x IN NODES(path) WHERE "Flight" IN LABELS(x)] | tp + [(n)<-[:ASSIGN]-(t: Ticket {class:"economy"} ) | t.price][0]) AS totalPrice
+RETURN path, totalPrice
+ORDER BY totalPrice ASC
+LIMIT 1
+
+9.
+MATCH (airport:Airport)-[:ORIGIN|:DESTINATION]-(flight:Flight)
+RETURN flight.airline, COUNT(DISTINCT airport) AS totalCities
+ORDER BY totalCities ASC
+
+10.
+MATCH path = (a1:Airport)<-[:ORIGIN]-(:Flight)-[:DESTINATION]->(a2:Airport)<-[:ORIGIN]-(:Flight)-[:DESTINATION]->(a3:Airport)
+WHERE (a1<>a2) AND (a1<>a3) AND (a2<>a3)
+WITH path, REDUCE(tp = 0, n IN [x IN NODES(path) WHERE 'Flight' IN LABELS(x)] | tp + [(n)<-[:ASSIGN]-(t {class: "economy"} ) | t.price][0]) as totalPrice
+RETURN path, totalPrice
+ORDER BY totalPrice ASC
+LIMIT 1
